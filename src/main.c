@@ -1,18 +1,56 @@
 /**
  * @file main.c
- * @author Raúl Ribeiro ({a22552@alunos.ipca.pt})
+ * @author Raúl Ribeiro ({a22552@alunos.ipca.pt}) |Rúben Oliveira ({a24861@alunos.ipca.pt})
  * @brief The main application file.
  * @version 0.1
  * @date 2024-11-29
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int main( int argc, char *argv[]) {
+#include "utils/file_utils.h"
+#include "utils/string_utils.h"
+#include "cli/cli.h"
 
+int main(int argc, char const *argv[])
+{
+  CLIOptions options;
+
+  // Valida os argumentos de entrada
+  if (!validate_args(argc, argv, &options))
+  {
+    return 1; // Sai com erro se a validacao falhar
+  }
+
+  // Mostra a ajuda se solicitado
+  if (options.show_help)
+  {
+    print_help(argv[0]);
+    return 0;
+  }
+
+  // TODO: Menu de opções;
+  // TODO: Se a entrada for Stdin então processar a informação;
+
+  // Exibe as opcoes para debug
+  printf("Opcoes:\n");
+  printf("  Separados por tabulacao: %s\n", options.is_tab ? "Sim" : "Nao");
+  printf("  Modo binario: %s\n", options.is_bin ? "Sim" : "Nao");
+  printf("Ficheiros:\n");
+  printf("  Ficheiro de utentes: %s\n", options.employees_file);
+  printf("  Ficheiro da ementa: %s\n", options.menu_file);
+  printf("  Ficheiro de escolhas: %s\n", options.choices_file);
+
+  // TODO: Parte lógica de processamento dos ficheiros de entrada
+  // TODO: Ficho 1 Dados dos utentes; Ficheiro 2 Info da Ementa Semanal; Ficheiro 3 Info das escolhas dos utentes
+  
+  // Finalizar
+  print_program_message(argv[0], "Processamento concluido.\n");
+
+  return 0;
 }
