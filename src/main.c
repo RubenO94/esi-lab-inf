@@ -17,6 +17,7 @@
 #include "utils/string_utils.h"
 #include "cli/cli.h"
 #include "models/employee.h"
+#include "models/menu.h"
 
 int main(int argc, char const *argv[])
 {
@@ -24,10 +25,18 @@ int main(int argc, char const *argv[])
   Employee employees[100];
   int employee_count;
 
-  // Valida os argumentos de entrada
+  // Valida os argumentos de entrada.
+  // Se não forem válidos, mostra o menu principal.
   if (!validate_args(argc, argv, &options))
   {
-    return 1; // Sai com erro se a validacao falhar
+    // TODO: Menu de opções;
+    // TODO: Se a entrada for Stdin então processar a informação;
+    // Initialize the data (for example)
+    initialize_menu();
+
+    while(1) {
+        show_menu();
+    }
   }
 
   // Mostra a ajuda se solicitado
@@ -36,9 +45,6 @@ int main(int argc, char const *argv[])
     print_help(argv[0]);
     return 0;
   }
-
-  // TODO: Menu de opções;
-  // TODO: Se a entrada for Stdin então processar a informação;
 
   // Exibe as opcoes para debug
   printf("Opcoes:\n");

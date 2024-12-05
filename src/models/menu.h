@@ -1,4 +1,7 @@
 // TODO: Criar a Esturura de dados para Ementa;
+#ifndef MENU_H
+#define MENU_H
+
 typedef struct
 {
   char day_of_week[10];      // Dia da semana (ex.: "2feira")
@@ -12,3 +15,10 @@ typedef struct
   char vegetarian_dish[100]; // Prato vegetariano
   int vegetarian_calories;   // Calorias do prato vegetariano
 } WeeklyMenu;
+
+/**
+ * @brief Mostra o menu principal da aplicação.
+ */
+void show_menu();
+
+#endif
