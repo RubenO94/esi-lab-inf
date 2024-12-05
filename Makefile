@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra
 
 # Lista de todos os ficheiros .c (código fonte) que fazem parte do programa.
 # Aqui indicamos onde estão os ficheiros que precisamos compilar. (Ir adicionando aqui, confrome vamos criando ficheiros .c)
-SRC = src/main.c src/utils/file_utils.c src/utils/string_utils.c src/cli/cli.c
+SRC = src/main.c src/utils/file_utils.c src/utils/string_utils.c src/cli/cli.c src/models/employee.c
 
 # Lista de ficheiros .o (ficheiros "objeto") gerados a partir dos ficheiros .c.
 # Aqui, substituímos ".c" por ".o" automaticamente.

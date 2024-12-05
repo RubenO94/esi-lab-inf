@@ -1,6 +1,6 @@
 /**
  * @file main.c
- * @author Raúl Ribeiro ({a22552@alunos.ipca.pt}) |Rúben Oliveira ({a24861@alunos.ipca.pt})
+ * @author Raúl Ribeiro ({a22552@alunos.ipca.pt}) | Rúben Oliveira ({a24861@alunos.ipca.pt})
  * @brief The main application file.
  * @version 0.1
  * @date 2024-11-29
@@ -16,10 +16,13 @@
 #include "utils/file_utils.h"
 #include "utils/string_utils.h"
 #include "cli/cli.h"
+#include "models/employee.h"
 
 int main(int argc, char const *argv[])
 {
   CLIOptions options;
+  Employee employees[100];
+  int employee_count;
 
   // Valida os argumentos de entrada
   if (!validate_args(argc, argv, &options))
@@ -48,7 +51,18 @@ int main(int argc, char const *argv[])
 
   // TODO: Parte lógica de processamento dos ficheiros de entrada
   // TODO: Ficho 1 Dados dos utentes; Ficheiro 2 Info da Ementa Semanal; Ficheiro 3 Info das escolhas dos utentes
-  
+
+  load_employees(options.employees_file, employees, &employee_count);
+  printf("Total de Funcionarios: %d\n", employee_count);
+  for (int i = 0; i < employee_count; i++)
+  {
+    printf("ID: %d, Nome: %s, NIF: %d, Telefone: %d\n",
+           employees[i].employee_number,
+           employees[i].name,
+           employees[i].nif,
+           employees[i].phone);
+  }
+
   // Finalizar
   print_program_message(argv[0], "Processamento concluido.\n");
 
