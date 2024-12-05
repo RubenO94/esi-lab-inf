@@ -1,3 +1,14 @@
+/**
+ * @file menu.c
+ * @author Raúl Ribeiro ({a22552@alunos.ipca.pt})
+ * @brief: The main menu look and functions.
+ * @version 0.1
+ * @date 2024-12-05
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include <stdio.h>
 #include <string.h>
 
