@@ -1,6 +1,5 @@
 #include "file_utils.h"
 #include <string.h>
-#include <sys/stat.h>
 
 int read_line(FILE *fp, char *buffer, size_t size)
 {
@@ -47,6 +46,11 @@ int is_file_binary(const char *filename)
 
 int file_exists(const char *filename)
 {
-    struct stat buffer;
-    return (stat(filename, &buffer) == 0);
+    FILE *file = fopen(filename, "r"); 
+    if (file)
+    {
+        fclose(file);
+        return 1;     // Retorna 1 para indicar que o ficheiro existe
+    }
+    return 0; // Retorna 0 se o ficheiro não puder ser aberto
 }
