@@ -51,7 +51,7 @@ $(BIN): $(OBJ)
 clean:
 # Remove todos os ficheiros objeto (.o) e o binário final.
 # O comando varia depender do sistema operativo.
-	$(RM) $(OBJ) $(BIN) 2>nul
+	$(RM) $(OBJ) $(BIN) 2>>logs/make-clean.log
 
 # Declara que "all" e "clean" são "falsos", ou seja, não se referem a ficheiros reais.
 # Isto é necessário para evitar problemas se houver ficheiros com os mesmos nomes.

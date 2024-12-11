@@ -53,3 +53,9 @@ dkms.conf
 
 # Executables
 prog
+
+# Doxygen Genereted Files
+doc/doxygen
+
+# Logs
+logs
