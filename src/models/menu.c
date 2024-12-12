@@ -11,6 +11,9 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include "menu.h"
+
 
 #define MAX_UTENTES 5
 #define MAX_MEALS 7

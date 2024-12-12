@@ -20,5 +20,10 @@ typedef struct
  * @brief Mostra o menu principal da aplicação.
  */
 void show_menu();
-
+void apresentacao_refeicoes();
+void listagem_utentes();
+void listar_refeicoes_calorias();
+void medias_calorias();
+void gerar_ementa_semanal();
+int initialize_menu();
 #endif
