@@ -31,11 +31,8 @@ Após a compilação, execute o programa com as seguintes opções:
 ```bash
 ./prog -tab employees.txt menu.txt choices.txt
 ```
-## Opções Disponíveis
-
-- **`-ajuda`**: Exibe as instruções de utilização.
-- **`-tab`**: Indica que os ficheiros estão no formato tabulado.
-- **`-bin`**: Indica que os ficheiros estão no formato binário.
+## Instruções de Uso
+Para mais informações sobre o funcionamento do programa, consulta a [Documentação da CLI](doc/feature_cli.md).
 
 ---
 
