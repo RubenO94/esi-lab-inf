@@ -32,11 +32,6 @@ int main(int argc, char const *argv[])
     // TODO: Menu de opções;
     // TODO: Se a entrada for Stdin então processar a informação;
     // Initialize the data (for example)
-    initialize_menu();
-
-    while(1) {
-        show_menu();
-    }
   }
 
   // Mostra a ajuda se solicitado
@@ -73,4 +68,14 @@ int main(int argc, char const *argv[])
   print_program_message(argv[0], "Processamento concluido.\n");
 
   return 0;
+}
+
+void NewFunction()
+{
+  initialize_menu();
+
+  while (1)
+  {
+    show_menu();
+  }
 }
