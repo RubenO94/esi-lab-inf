@@ -37,3 +37,19 @@ Após a compilação, execute o programa com as seguintes opções:
 - **`-tab`**: Indica que os ficheiros estão no formato tabulado.
 - **`-bin`**: Indica que os ficheiros estão no formato binário.
 
+---
+
+## Features 
+
+1. [Gestão de Funcionários](doc/feature_employees.md)  
+   Permite carregar, listar e gerir os dados dos funcionários.
+
+2. [Gestão da Ementa Semanal](doc/feature_menu.md)  
+   Permite carregar, listar e gerir a ementa semanal.
+
+3. [Gestão das Escolhas Semanais](doc/feature_choices.md)  
+   Permite carregar, listar e gerir as escolhas feitas pelos utentes.
+
+4. [Interface de Linha de Comando (CLI)](doc/feature_cli.md)  
+   Permite interagir com o programa usando argumentos e comandos.
+
